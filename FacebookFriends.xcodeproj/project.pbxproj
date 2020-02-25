@@ -99,12 +99,12 @@
 		DFB9AF9F24057C430022B967 /* FacebookFriends */ = {
 			isa = PBXGroup;
 			children = (
-				DFB9AFA024057C430022B967 /* AppDelegate.swift */,
-				DFB9AFA224057C430022B967 /* SceneDelegate.swift */,
-				DFB9AFA424057C430022B967 /* ViewController.swift */,
-				DFB9AFA624057C430022B967 /* Main.storyboard */,
-				DFB9AFA924057C440022B967 /* Assets.xcassets */,
-				DFB9AFAB24057C440022B967 /* LaunchScreen.storyboard */,
+				DFB9AFD6240580530022B967 /* Resources */,
+				DFB9AFD5240580350022B967 /* App */,
+				DFB9AFD4240580270022B967 /* Storyboards */,
+				DFB9AFD224057FE90022B967 /* Models */,
+				DFB9AFD124057FD30022B967 /* ViewModels */,
+				DFB9AFD024057FBE0022B967 /* ViewControllers */,
 				DFB9AFAE24057C440022B967 /* Info.plist */,
 			);
 			path = FacebookFriends;
@@ -126,6 +126,54 @@
 				DFB9AFC424057C440022B967 /* Info.plist */,
 			);
 			path = FacebookFriendsUITests;
+			sourceTree = "<group>";
+		};
+		DFB9AFD024057FBE0022B967 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DFB9AFA424057C430022B967 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DFB9AFD124057FD30022B967 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DFB9AFD224057FE90022B967 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DFB9AFD4240580270022B967 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				DFB9AFAB24057C440022B967 /* LaunchScreen.storyboard */,
+				DFB9AFA624057C430022B967 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		DFB9AFD5240580350022B967 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DFB9AFA024057C430022B967 /* AppDelegate.swift */,
+				DFB9AFA224057C430022B967 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DFB9AFD6240580530022B967 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DFB9AFA924057C440022B967 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
