@@ -26,6 +26,8 @@ class LoginViewController: UIViewController {
         if loginList.contains(userNameTextField.text ?? "") {
             NavigationHelper.shared.FriendListVC(view: self, userName: "salih")
         }else{
+            ErrorReporting.shared.showMessage(title: "Uyarı", msg: "Lütfen Geçerli Kullanıcı Adı Giriniz", on: self)
+            
         }
     }
     
