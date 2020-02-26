@@ -14,14 +14,23 @@ class LoginViewController: UIViewController {
     
     var viewModel = ViewModel()
     var result: ResponseList?
+    let loginList = ["9nd54", "v542w", "17pcy0", "gbf48", "zdah4"]
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
     
-
     }
+    
+    func checkLogin(){
+        if loginList.contains(userNameTextField.text ?? "") {
+            NavigationHelper.shared.FriendListVC(view: self, userName: "salih")
+        }else{
+        }
+    }
+    
     @IBAction func loginButton(_ sender: Any) {
+        checkLogin()
     }
 }
 
