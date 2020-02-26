@@ -14,13 +14,13 @@ class NavigationHelper: NSObject {
     static let shared = NavigationHelper()
     
     func FriendListVC(view: UIViewController, userName: String?) {
-        if let vc = self.createVCFromStoryboard(boardName: "Main", identifier: "FriendListVC") as? FriendListVC {
+        if let vc = self.createVCFromStoryboard(boardName: "Main", identifier: "FriendListViewController") as? FriendListViewController {
             view.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
     func DetailVC(view: UIViewController) {
-        if let vc = NavigationHelper.shared.createVCFromStoryboard(boardName: "Main", identifier: "DetailVC") as? DetailVC {
+        if let vc = NavigationHelper.shared.createVCFromStoryboard(boardName: "Main", identifier: "DetailViewController") as? DetailViewController {
             view.navigationController?.pushViewController(vc, animated: true)
         }
     }

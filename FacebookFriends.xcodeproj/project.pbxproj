@@ -10,6 +10,8 @@
 		537F579CFB725AF89433067D /* Pods_FacebookFriendsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B9D40D881FDAD35E348583 /* Pods_FacebookFriendsTests.framework */; };
 		6466D4BA13D6E8CFFD729F3A /* Pods_FacebookFriends.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF3E0B697B327DB57A7EF21 /* Pods_FacebookFriends.framework */; };
 		A26C9731C410F3D77D145DDE /* Pods_FacebookFriends_FacebookFriendsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80DAAE461CE9DEF1DDD7C19A /* Pods_FacebookFriends_FacebookFriendsUITests.framework */; };
+		DF2806C82406D41700E3E08D /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2806C72406D41700E3E08D /* FriendListViewController.swift */; };
+		DF2806CA2406D42500E3E08D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2806C92406D42500E3E08D /* DetailViewController.swift */; };
 		DFB036472406815B0051E3A8 /* FacebookFriendsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB036462406815B0051E3A8 /* FacebookFriendsServices.swift */; };
 		DFB0364B24068BA60051E3A8 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB0364A24068BA60051E3A8 /* ViewModel.swift */; };
 		DFB0364E2406B1CE0051E3A8 /* NavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB0364D2406B1CE0051E3A8 /* NavigationHelper.swift */; };
@@ -52,6 +54,8 @@
 		9E4BC1354166F3DA89A49FF6 /* Pods-FacebookFriends.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacebookFriends.release.xcconfig"; path = "Target Support Files/Pods-FacebookFriends/Pods-FacebookFriends.release.xcconfig"; sourceTree = "<group>"; };
 		AAF3E0B697B327DB57A7EF21 /* Pods_FacebookFriends.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FacebookFriends.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B9D40D881FDAD35E348583 /* Pods_FacebookFriendsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FacebookFriendsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF2806C72406D41700E3E08D /* FriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
+		DF2806C92406D42500E3E08D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DFB036462406815B0051E3A8 /* FacebookFriendsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookFriendsServices.swift; sourceTree = "<group>"; };
 		DFB0364A24068BA60051E3A8 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		DFB0364D2406B1CE0051E3A8 /* NavigationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHelper.swift; sourceTree = "<group>"; };
@@ -201,6 +205,8 @@
 			isa = PBXGroup;
 			children = (
 				DFB9AFA424057C430022B967 /* LoginViewController.swift */,
+				DF2806C72406D41700E3E08D /* FriendListViewController.swift */,
+				DF2806C92406D42500E3E08D /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -489,6 +495,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF2806CA2406D42500E3E08D /* DetailViewController.swift in Sources */,
+				DF2806C82406D41700E3E08D /* FriendListViewController.swift in Sources */,
 				DFCDC75F24065DAE00C07689 /* ResponseList.swift in Sources */,
 				DFB9AFA524057C430022B967 /* LoginViewController.swift in Sources */,
 				DFCDC761240665FE00C07689 /* Home.swift in Sources */,
