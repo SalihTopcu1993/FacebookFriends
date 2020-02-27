@@ -1,8 +1,8 @@
 PODS:
   - Alamofire (4.9.1)
-  - Kingfisher (5.13.1):
-    - Kingfisher/Core (= 5.13.1)
-  - Kingfisher/Core (5.13.1)
+  - Kingfisher (5.13.2):
+    - Kingfisher/Core (= 5.13.2)
+  - Kingfisher/Core (5.13.2)
   - Moya (13.0.1):
     - Moya/Core (= 13.0.1)
   - Moya/Core (13.0.1):
@@ -31,7 +31,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  Kingfisher: f33a848445e33c543620812158dc5d47f6bf90df
+  Kingfisher: d342c8354c10c3d85a27d6d4c42c41285924b898
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   Realm: 5e92902e2875dff4bb0fd02f67bb737c3d5db2bc
   RealmSwift: 9a360fc7bae04fc2e308a34fbd899d5faa2d6b22

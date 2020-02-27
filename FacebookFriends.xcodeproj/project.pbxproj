@@ -20,6 +20,7 @@
 		DF7FFC962407DE6300865591 /* RealmFavoriteFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7FFC952407DE6300865591 /* RealmFavoriteFriends.swift */; };
 		DF7FFC982407DEB600865591 /* RealmItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7FFC972407DEB600865591 /* RealmItem.swift */; };
 		DF7FFC9A2407DEC200865591 /* ResponseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7FFC992407DEC200865591 /* ResponseItem.swift */; };
+		DF8E636524083F3C00CF8832 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8E636424083F3C00CF8832 /* Artwork.swift */; };
 		DFB036472406815B0051E3A8 /* FacebookFriendsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB036462406815B0051E3A8 /* FacebookFriendsServices.swift */; };
 		DFB0364B24068BA60051E3A8 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB0364A24068BA60051E3A8 /* ViewModel.swift */; };
 		DFB0364E2406B1CE0051E3A8 /* NavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB0364D2406B1CE0051E3A8 /* NavigationHelper.swift */; };
@@ -72,6 +73,7 @@
 		DF7FFC952407DE6300865591 /* RealmFavoriteFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmFavoriteFriends.swift; sourceTree = "<group>"; };
 		DF7FFC972407DEB600865591 /* RealmItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmItem.swift; sourceTree = "<group>"; };
 		DF7FFC992407DEC200865591 /* ResponseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseItem.swift; sourceTree = "<group>"; };
+		DF8E636424083F3C00CF8832 /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		DFB036462406815B0051E3A8 /* FacebookFriendsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookFriendsServices.swift; sourceTree = "<group>"; };
 		DFB0364A24068BA60051E3A8 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		DFB0364D2406B1CE0051E3A8 /* NavigationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHelper.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 			children = (
 				DF7FFC902407DE1600865591 /* RealmModel */,
 				DF7FFC8F2407DE0600865591 /* ResponseModel */,
+				DF8E636424083F3C00CF8832 /* Artwork.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -315,7 +318,7 @@
 				DFB9AF9924057C430022B967 /* Sources */,
 				DFB9AF9A24057C430022B967 /* Frameworks */,
 				DFB9AF9B24057C430022B967 /* Resources */,
-				ABFA3023B2246B2F6C081875 /* [CP] Embed Pods Frameworks */,
+				168088D2BF2D2EFD7E64159E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -353,7 +356,7 @@
 				DFB9AFBA24057C440022B967 /* Sources */,
 				DFB9AFBB24057C440022B967 /* Frameworks */,
 				DFB9AFBC24057C440022B967 /* Resources */,
-				2011888140F273B4E431E596 /* [CP] Embed Pods Frameworks */,
+				068FA9C3751BC8EC1BC14E6F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -436,7 +439,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2011888140F273B4E431E596 /* [CP] Embed Pods Frameworks */ = {
+		068FA9C3751BC8EC1BC14E6F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -451,6 +454,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FacebookFriends-FacebookFriendsUITests/Pods-FacebookFriends-FacebookFriendsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		168088D2BF2D2EFD7E64159E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FacebookFriends/Pods-FacebookFriends-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FacebookFriends/Pods-FacebookFriends-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FacebookFriends/Pods-FacebookFriends-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		36B41E12087055A334F12CB0 /* [CP] Check Pods Manifest.lock */ = {
@@ -497,23 +517,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		ABFA3023B2246B2F6C081875 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FacebookFriends/Pods-FacebookFriends-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FacebookFriends/Pods-FacebookFriends-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FacebookFriends/Pods-FacebookFriends-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C6CB2A6D505C2500D80229DA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -553,6 +556,7 @@
 				DF7FFC8E2407DC3700865591 /* RealmManager.swift in Sources */,
 				DFB9AFA124057C430022B967 /* AppDelegate.swift in Sources */,
 				DFB036472406815B0051E3A8 /* FacebookFriendsServices.swift in Sources */,
+				DF8E636524083F3C00CF8832 /* Artwork.swift in Sources */,
 				DF7FFC962407DE6300865591 /* RealmFavoriteFriends.swift in Sources */,
 				DF7FFC982407DEB600865591 /* RealmItem.swift in Sources */,
 				DF7FFC922407DE3900865591 /* RealmList.swift in Sources */,

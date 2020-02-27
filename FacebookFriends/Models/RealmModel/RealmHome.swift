@@ -7,3 +7,10 @@
 //
 
 import Foundation
+//import RealmSwift
+
+//struct Home {
+//
+//    let latitude : Float?
+//    let longitude: Float?
+//}

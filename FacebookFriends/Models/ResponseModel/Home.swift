@@ -10,8 +10,8 @@ import Foundation
 
 struct Home {
 
-    let latitude : Float?
-    let longitude: Float?
+    let latitude : Double?
+    let longitude: Double?
 }
 
 extension Home : Decodable {
@@ -24,7 +24,7 @@ extension Home : Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: HomeCodingKeys.self)
 
-        latitude = try? container.decode(Float.self, forKey: .latitude)
-        longitude = try? container.decode(Float.self, forKey: .longitude)
+        latitude = try? container.decode(Double.self, forKey: .latitude)
+        longitude = try? container.decode(Double.self, forKey: .longitude)
     }
 }

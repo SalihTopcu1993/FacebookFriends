@@ -76,25 +76,31 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rqb-4m-JjV">
-                                                    <rect key="frame" x="20" y="20" width="106" height="0.0"/>
+                                                    <rect key="frame" x="20" y="112" width="106" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwG-dx-V3S">
-                                                    <rect key="frame" x="20" y="25" width="106" height="0.0"/>
+                                                    <rect key="frame" x="20" y="152.5" width="106" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w6E-Mh-3sU">
+                                                    <rect key="frame" x="20" y="20" width="106" height="82"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="w6E-Mh-3sU" firstAttribute="top" secondItem="JmT-yL-q85" secondAttribute="top" constant="20" id="747-jd-acY"/>
+                                                <constraint firstItem="w6E-Mh-3sU" firstAttribute="trailing" secondItem="Rqb-4m-JjV" secondAttribute="trailing" id="Cr3-PD-QtX"/>
                                                 <constraint firstItem="DwG-dx-V3S" firstAttribute="leading" secondItem="JmT-yL-q85" secondAttribute="leading" constant="20" id="DCr-JP-p7D"/>
-                                                <constraint firstAttribute="bottom" secondItem="DwG-dx-V3S" secondAttribute="bottom" constant="168" id="KCn-ci-Z4t"/>
-                                                <constraint firstItem="Rqb-4m-JjV" firstAttribute="top" secondItem="JmT-yL-q85" secondAttribute="top" constant="20" id="gjP-gn-CYK"/>
+                                                <constraint firstAttribute="bottom" secondItem="DwG-dx-V3S" secondAttribute="bottom" constant="20" id="KCn-ci-Z4t"/>
+                                                <constraint firstItem="w6E-Mh-3sU" firstAttribute="leading" secondItem="Rqb-4m-JjV" secondAttribute="leading" id="nj5-8l-4gj"/>
                                                 <constraint firstAttribute="trailing" secondItem="Rqb-4m-JjV" secondAttribute="trailing" constant="20" id="nll-yp-N1d"/>
                                                 <constraint firstItem="DwG-dx-V3S" firstAttribute="top" secondItem="Rqb-4m-JjV" secondAttribute="bottom" constant="20" id="pso-I5-1Df"/>
                                                 <constraint firstItem="Rqb-4m-JjV" firstAttribute="leading" secondItem="JmT-yL-q85" secondAttribute="leading" constant="20" id="tIC-81-dE1"/>
+                                                <constraint firstItem="Rqb-4m-JjV" firstAttribute="top" secondItem="w6E-Mh-3sU" secondAttribute="bottom" constant="10" id="wu1-RZ-Ndx"/>
                                                 <constraint firstAttribute="trailing" secondItem="DwG-dx-V3S" secondAttribute="trailing" constant="20" id="xfA-PL-C0a"/>
                                             </constraints>
                                         </collectionViewCellContentView>
@@ -102,6 +108,7 @@
                                         <connections>
                                             <outlet property="emailLabel" destination="DwG-dx-V3S" id="fLV-kp-rhz"/>
                                             <outlet property="nameLabel" destination="Rqb-4m-JjV" id="YJe-mf-tgN"/>
+                                            <outlet property="profileImageView" destination="w6E-Mh-3sU" id="Rre-jL-ov2"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -135,9 +142,34 @@
                     <view key="view" contentMode="scaleToFill" id="lR1-tf-1d9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GTn-8I-yYa">
+                                <rect key="frame" x="85" y="74" width="244" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="U03-jB-9gE"/>
+                                </constraints>
+                            </imageView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iys-3p-a6m">
+                                <rect key="frame" x="20" y="284" width="374" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="6eL-tx-tFO"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iys-3p-a6m" firstAttribute="top" secondItem="GTn-8I-yYa" secondAttribute="bottom" constant="80" id="IMn-7r-dGL"/>
+                            <constraint firstItem="iys-3p-a6m" firstAttribute="leading" secondItem="Rfu-0R-Nwb" secondAttribute="leading" constant="20" id="S0d-hC-FRC"/>
+                            <constraint firstItem="GTn-8I-yYa" firstAttribute="leading" secondItem="Rfu-0R-Nwb" secondAttribute="leading" constant="85" id="mmM-Og-P5c"/>
+                            <constraint firstItem="Rfu-0R-Nwb" firstAttribute="trailing" secondItem="iys-3p-a6m" secondAttribute="trailing" constant="20" id="oGa-J9-svy"/>
+                            <constraint firstItem="Rfu-0R-Nwb" firstAttribute="trailing" secondItem="GTn-8I-yYa" secondAttribute="trailing" constant="85" id="oMD-bZ-ffU"/>
+                            <constraint firstItem="GTn-8I-yYa" firstAttribute="top" secondItem="Rfu-0R-Nwb" secondAttribute="top" constant="30" id="tNz-kf-aaa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Rfu-0R-Nwb"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="iys-3p-a6m" id="Uel-Lw-uUJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZYA-Jy-FSB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

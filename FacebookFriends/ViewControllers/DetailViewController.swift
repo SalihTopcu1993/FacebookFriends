@@ -7,24 +7,39 @@
 //
 
 import UIKit
+import MapKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, MKMapViewDelegate {
 
+    @IBOutlet weak var mapView: MKMapView!
+    
+    var result : ResponseItem?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        mapView.delegate = self
+        setMap()
     }
     
 
-    /*
-    // MARK: - Navigation
+    func setMap() {
+        let initialLocation = CLLocation(latitude: result?.home?.latitude ?? 0.0, longitude: result?.home?.longitude ?? 0.0)
+        let regionRadius: CLLocationDistance = 1000
+        func centerMapOnLocation(location: CLLocation) {
+            let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
+                                                      latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+          mapView.setRegion(coordinateRegion, animated: true)
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        }
+        centerMapOnLocation(location: initialLocation)
+        // show artwork on map
+        let artwork = Artwork(title: result?.name ?? "",
+                              locationName: result?.name ?? "",
+                              discipline: result?.name ?? "",
+          coordinate: CLLocationCoordinate2D(latitude: result?.home?.latitude ?? 0.0, longitude: result?.home?.longitude ?? 0.0))
+        mapView.addAnnotation(artwork)
     }
-    */
 
 }
+

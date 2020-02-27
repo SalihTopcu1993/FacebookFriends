@@ -6,4 +6,11 @@
 //  Copyright © 2020 salihtopcu. All rights reserved.
 //
 
-import Foundation
+//import Foundation
+//import RealmSwift
+//
+//class RealmList: Object {
+//    
+//@objc dynamic var value = RealmItem()
+//    
+//}
