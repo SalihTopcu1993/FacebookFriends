@@ -9,22 +9,43 @@
 import UIKit
 
 class FriendListViewController: UIViewController {
-
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    var viewModel = ViewModel()
+    var userName: String?
+    var result: ResponseList?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        initVM()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func initVM(){
+        viewModel.userName = "9nd54"
+        viewModel.delegate = self
+        viewModel.getList()
     }
-    */
 
+}
+
+extension FriendListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.result?.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FriendListCell", for: indexPath) as? FriendListCell {
+            guard let result = viewModel.result?[indexPath.row] else { return UICollectionViewCell() }
+            cell.setData(result: result)
+            return cell
+        }
+        return UICollectionViewCell()
+    }
+}
+
+extension FriendListViewController: ListDelegate {
+    func updatedList() {
+        collectionView.reloadData()
+    }
 }

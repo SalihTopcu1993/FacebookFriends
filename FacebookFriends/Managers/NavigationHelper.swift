@@ -15,6 +15,7 @@ class NavigationHelper: NSObject {
     
     func FriendListVC(view: UIViewController, userName: String?) {
         if let vc = self.createVCFromStoryboard(boardName: "Main", identifier: "FriendListViewController") as? FriendListViewController {
+            vc.userName = userName
             view.navigationController?.pushViewController(vc, animated: true)
         }
     }

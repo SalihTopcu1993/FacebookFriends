@@ -12,8 +12,6 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var userNameTextField: UITextField!
     
-    var viewModel = ViewModel()
-    var result: ResponseList?
     let loginList = ["9nd54", "v542w", "17pcy0", "gbf48", "zdah4"]
     
 
@@ -24,7 +22,7 @@ class LoginViewController: UIViewController {
     
     func checkLogin(){
         if loginList.contains(userNameTextField.text ?? "") {
-            NavigationHelper.shared.FriendListVC(view: self, userName: "salih")
+            NavigationHelper.shared.FriendListVC(view: self, userName: "9nd54")
         }else{
             ErrorReporting.shared.showMessage(title: "Uyarı", msg: "Lütfen Geçerli Kullanıcı Adı Giriniz", on: self)
             

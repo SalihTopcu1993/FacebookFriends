@@ -19,7 +19,6 @@ class ViewModel {
     weak var delegate: ListDelegate?
 
     func getList() {
-        setLoading(true)
 
         provider.request(.list(username:(self.userName!))) { (response) in
             switch response {
@@ -33,14 +32,9 @@ class ViewModel {
                 } catch let error {
                     print(error)
                 }
-                self.setLoading(false)
                 
             }
         }
-    }
-
-    func setLoading (_  isLoading : Bool) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = isLoading
     }
 
 }

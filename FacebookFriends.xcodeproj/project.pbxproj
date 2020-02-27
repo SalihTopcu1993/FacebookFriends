@@ -13,6 +13,13 @@
 		DF2806C82406D41700E3E08D /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2806C72406D41700E3E08D /* FriendListViewController.swift */; };
 		DF2806CA2406D42500E3E08D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2806C92406D42500E3E08D /* DetailViewController.swift */; };
 		DF2806CE2406DA4800E3E08D /* ShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2806CD2406DA4800E3E08D /* ShowAlert.swift */; };
+		DF2806D12406E0DF00E3E08D /* FriendListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2806D02406E0DF00E3E08D /* FriendListCell.swift */; };
+		DF7FFC8E2407DC3700865591 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7FFC8D2407DC3700865591 /* RealmManager.swift */; };
+		DF7FFC922407DE3900865591 /* RealmList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7FFC912407DE3900865591 /* RealmList.swift */; };
+		DF7FFC942407DE4B00865591 /* RealmHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7FFC932407DE4B00865591 /* RealmHome.swift */; };
+		DF7FFC962407DE6300865591 /* RealmFavoriteFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7FFC952407DE6300865591 /* RealmFavoriteFriends.swift */; };
+		DF7FFC982407DEB600865591 /* RealmItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7FFC972407DEB600865591 /* RealmItem.swift */; };
+		DF7FFC9A2407DEC200865591 /* ResponseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7FFC992407DEC200865591 /* ResponseItem.swift */; };
 		DFB036472406815B0051E3A8 /* FacebookFriendsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB036462406815B0051E3A8 /* FacebookFriendsServices.swift */; };
 		DFB0364B24068BA60051E3A8 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB0364A24068BA60051E3A8 /* ViewModel.swift */; };
 		DFB0364E2406B1CE0051E3A8 /* NavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB0364D2406B1CE0051E3A8 /* NavigationHelper.swift */; };
@@ -58,6 +65,13 @@
 		DF2806C72406D41700E3E08D /* FriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
 		DF2806C92406D42500E3E08D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DF2806CD2406DA4800E3E08D /* ShowAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlert.swift; sourceTree = "<group>"; };
+		DF2806D02406E0DF00E3E08D /* FriendListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListCell.swift; sourceTree = "<group>"; };
+		DF7FFC8D2407DC3700865591 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		DF7FFC912407DE3900865591 /* RealmList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmList.swift; sourceTree = "<group>"; };
+		DF7FFC932407DE4B00865591 /* RealmHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHome.swift; sourceTree = "<group>"; };
+		DF7FFC952407DE6300865591 /* RealmFavoriteFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmFavoriteFriends.swift; sourceTree = "<group>"; };
+		DF7FFC972407DEB600865591 /* RealmItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmItem.swift; sourceTree = "<group>"; };
+		DF7FFC992407DEC200865591 /* ResponseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseItem.swift; sourceTree = "<group>"; };
 		DFB036462406815B0051E3A8 /* FacebookFriendsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookFriendsServices.swift; sourceTree = "<group>"; };
 		DFB0364A24068BA60051E3A8 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		DFB0364D2406B1CE0051E3A8 /* NavigationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHelper.swift; sourceTree = "<group>"; };
@@ -132,6 +146,36 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		DF2806CF2406E0B600E3E08D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DF2806D02406E0DF00E3E08D /* FriendListCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		DF7FFC8F2407DE0600865591 /* ResponseModel */ = {
+			isa = PBXGroup;
+			children = (
+				DFCDC75E24065DAE00C07689 /* ResponseList.swift */,
+				DFCDC760240665FE00C07689 /* Home.swift */,
+				DFCDC7622406664D00C07689 /* FavoriteFriends.swift */,
+				DF7FFC992407DEC200865591 /* ResponseItem.swift */,
+			);
+			path = ResponseModel;
+			sourceTree = "<group>";
+		};
+		DF7FFC902407DE1600865591 /* RealmModel */ = {
+			isa = PBXGroup;
+			children = (
+				DF7FFC912407DE3900865591 /* RealmList.swift */,
+				DF7FFC932407DE4B00865591 /* RealmHome.swift */,
+				DF7FFC952407DE6300865591 /* RealmFavoriteFriends.swift */,
+				DF7FFC972407DEB600865591 /* RealmItem.swift */,
+			);
+			path = RealmModel;
+			sourceTree = "<group>";
+		};
 		DFB03645240681060051E3A8 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,7 +187,9 @@
 		DFB0364C2406B1AF0051E3A8 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				DF2806CD2406DA4800E3E08D /* ShowAlert.swift */,
 				DFB0364D2406B1CE0051E3A8 /* NavigationHelper.swift */,
+				DF7FFC8D2407DC3700865591 /* RealmManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -173,6 +219,7 @@
 		DFB9AF9F24057C430022B967 /* FacebookFriends */ = {
 			isa = PBXGroup;
 			children = (
+				DF2806CF2406E0B600E3E08D /* Cell */,
 				DFB0364C2406B1AF0051E3A8 /* Managers */,
 				DFB03645240681060051E3A8 /* Network */,
 				DFB9AFD6240580530022B967 /* Resources */,
@@ -181,7 +228,6 @@
 				DFB9AFD224057FE90022B967 /* Models */,
 				DFB9AFD124057FD30022B967 /* ViewModels */,
 				DFB9AFD024057FBE0022B967 /* ViewControllers */,
-				DF2806CD2406DA4800E3E08D /* ShowAlert.swift */,
 			);
 			path = FacebookFriends;
 			sourceTree = "<group>";
@@ -225,9 +271,8 @@
 		DFB9AFD224057FE90022B967 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DFCDC75E24065DAE00C07689 /* ResponseList.swift */,
-				DFCDC760240665FE00C07689 /* Home.swift */,
-				DFCDC7622406664D00C07689 /* FavoriteFriends.swift */,
+				DF7FFC902407DE1600865591 /* RealmModel */,
+				DF7FFC8F2407DE0600865591 /* ResponseModel */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -498,14 +543,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF7FFC9A2407DEC200865591 /* ResponseItem.swift in Sources */,
 				DF2806CA2406D42500E3E08D /* DetailViewController.swift in Sources */,
 				DF2806C82406D41700E3E08D /* FriendListViewController.swift in Sources */,
 				DFCDC75F24065DAE00C07689 /* ResponseList.swift in Sources */,
 				DFB9AFA524057C430022B967 /* LoginViewController.swift in Sources */,
+				DF7FFC942407DE4B00865591 /* RealmHome.swift in Sources */,
 				DFCDC761240665FE00C07689 /* Home.swift in Sources */,
+				DF7FFC8E2407DC3700865591 /* RealmManager.swift in Sources */,
 				DFB9AFA124057C430022B967 /* AppDelegate.swift in Sources */,
 				DFB036472406815B0051E3A8 /* FacebookFriendsServices.swift in Sources */,
+				DF7FFC962407DE6300865591 /* RealmFavoriteFriends.swift in Sources */,
+				DF7FFC982407DEB600865591 /* RealmItem.swift in Sources */,
+				DF7FFC922407DE3900865591 /* RealmList.swift in Sources */,
 				DF2806CE2406DA4800E3E08D /* ShowAlert.swift in Sources */,
+				DF2806D12406E0DF00E3E08D /* FriendListCell.swift in Sources */,
 				DFCDC75B240653BD00C07689 /* SceneDelegate.swift in Sources */,
 				DFB0364B24068BA60051E3A8 /* ViewModel.swift in Sources */,
 				DFB0364E2406B1CE0051E3A8 /* NavigationHelper.swift in Sources */,
