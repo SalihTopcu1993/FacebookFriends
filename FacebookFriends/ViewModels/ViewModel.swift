@@ -24,10 +24,12 @@ class ViewModel {
             switch response {
             case .failure(let err):
                 print(err)
+                 RealmHelper.shared.readResultElement()
             case .success(let value):
                 let data = value.data
                 do{
                     self.result = try JSONDecoder().decode([ResponseItem].self, from: data)
+                    RealmHelper.shared.addResultElement(self.result ?? [])
                     self.delegate?.updatedList()
                 } catch let error {
                     print(error)

@@ -7,3 +7,11 @@
 //
 
 import Foundation
+import RealmSwift
+
+class RealmFavoriteFriends: NSObject {
+    
+    @objc dynamic var id: String = ""
+    @objc dynamic var name:String = ""
+    
+}

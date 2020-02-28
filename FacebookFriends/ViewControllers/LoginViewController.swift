@@ -12,7 +12,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var userNameTextField: UITextField!
     
-    let loginList = ["9nd54", "v542w", "17pcy0", "gbf48", "zdah4"]
+    let loginList = ["", "9nd54", "v542w", "17pcy0", "gbf48", "zdah4"]
     
 
     override func viewDidLoad() {

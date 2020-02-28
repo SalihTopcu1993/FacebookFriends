@@ -7,10 +7,12 @@
 //
 
 import Foundation
-//import RealmSwift
+import RealmSwift
 
-//struct Home {
-//
-//    let latitude : Float?
-//    let longitude: Float?
-//}
+class RealmHome: Object {
+    
+    @objc dynamic var latitude: Double = 0.0
+    @objc dynamic var longitude: Double = 0.0
+    
+}
+

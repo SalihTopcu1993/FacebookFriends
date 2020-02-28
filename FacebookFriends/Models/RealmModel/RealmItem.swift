@@ -1,53 +1,34 @@
-////
-////  RealmItem.swift
-////  FacebookFriends
-////
-////  Created by Salih Topcu on 27.02.2020.
-////  Copyright © 2020 salihtopcu. All rights reserved.
-////
 //
-//import Foundation
-//import RealmSwift
+//  RealmItem.swift
+//  FacebookFriends
 //
+//  Created by Salih Topcu on 27.02.2020.
+//  Copyright © 2020 salihtopcu. All rights reserved.
 //
-////struct ResponseItem {
-////
-////    let id : String?
-////    let isActive: Bool?
-////    let picture: String?
-////    let age: Int?
-////    let eyeColor: String?
-////    let name: String?
-////    let gender: String?
-////    let company: String?
-////    let email: String?
-////    let phone: String?
-////    let address: String?
-////    let about: String?
-////    let registered: String?
-////    let home : Home?
-////    let favoriteFriends: [FavoriteFriends]?
-////}
-//
-//class RealmItem: Object {
-//    @objc dynamic var id = ""
-//    @objc dynamic var isActive = false
-//    @objc dynamic var picture = ""
-//    @objc dynamic var age = 0
-//    @objc dynamic var eyeColor = ""
-//    @objc dynamic var name = ""
-//    @objc dynamic var gender = ""
-//    @objc dynamic var company = ""
-//    @objc dynamic var email = ""
-//    @objc dynamic var phone = ""
-//    @objc dynamic var address = ""
-//    @objc dynamic var about = ""
-//    @objc dynamic var registered = ""
-//    @objc dynamic var home = ""
-//    @objc dynamic var favoriteFriends = ""
-//    
-//  @objc dynamic var created = Date()
-//  
-//  @objc dynamic var category: Category!
-//}
-//
+
+import Foundation
+import RealmSwift
+
+class RealmItem: Object {
+    @objc dynamic var id: String = ""
+    @objc dynamic var isActive: Bool = false
+    @objc dynamic var picture: String = ""
+    @objc dynamic var age: Int = 0
+    @objc dynamic var eyeColor: String = ""
+    @objc dynamic var name: String = ""
+    @objc dynamic var gender: String = ""
+    @objc dynamic var company: String = ""
+    @objc dynamic var email: String = ""
+    @objc dynamic var phone: String = ""
+    @objc dynamic var address: String = ""
+    @objc dynamic var about: String = ""
+    @objc dynamic var registered: String = ""
+    var home: RealmHome?
+    var favoriteFriends:[RealmFavoriteFriends]? = []
+    
+    
+    func ignoredProperties() -> [String] {
+      return ["home", "favoriteFriends"]
+    }
+}
+

@@ -25,6 +25,7 @@ class FriendListViewController: UIViewController {
         viewModel.userName = "9nd54"
         viewModel.delegate = self
         viewModel.getList()
+
     }
 
 }
@@ -46,6 +47,9 @@ extension FriendListViewController: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let result = viewModel.result?[indexPath.row] else { return }
         NavigationHelper.shared.DetailVC(view: self, result: result)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width:( self.view.frame.width-40)/2, height: 100)
     }
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
