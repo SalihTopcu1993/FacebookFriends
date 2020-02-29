@@ -38,6 +38,7 @@
 		DFE3FA5B240AA9C2009F0A82 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE3FA5A240AA9C2009F0A82 /* LoginViewModel.swift */; };
 		DFE3FA5D240ABC92009F0A82 /* LocalizedStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = DFE3FA5C240ABC92009F0A82 /* LocalizedStrings.strings */; };
 		DFE3FA60240ABD61009F0A82 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE3FA5F240ABD61009F0A82 /* Localization.swift */; };
+		DFE3FA62240AC396009F0A82 /* CheckInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE3FA61240AC396009F0A82 /* CheckInternet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		DFE3FA5A240AA9C2009F0A82 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		DFE3FA5C240ABC92009F0A82 /* LocalizedStrings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = LocalizedStrings.strings; sourceTree = "<group>"; };
 		DFE3FA5F240ABD61009F0A82 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		DFE3FA61240AC396009F0A82 /* CheckInternet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInternet.swift; sourceTree = "<group>"; };
 		E1CDBD2E0AFBC57ABBE525BB /* Pods-FacebookFriends-FacebookFriendsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacebookFriends-FacebookFriendsUITests.release.xcconfig"; path = "Target Support Files/Pods-FacebookFriends-FacebookFriendsUITests/Pods-FacebookFriends-FacebookFriendsUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				DFB036462406815B0051E3A8 /* FacebookFriendsServices.swift */,
+				DFE3FA61240AC396009F0A82 /* CheckInternet.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -586,6 +589,7 @@
 				DFB0364E2406B1CE0051E3A8 /* NavigationHelper.swift in Sources */,
 				DFCDC7632406664D00C07689 /* FavoriteFriends.swift in Sources */,
 				DFE3FA5B240AA9C2009F0A82 /* LoginViewModel.swift in Sources */,
+				DFE3FA62240AC396009F0A82 /* CheckInternet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
