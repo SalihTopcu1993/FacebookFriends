@@ -1,0 +1,14 @@
+/* 
+  LocalizedStrings.strings
+  FacebookFriends
+
+  Created by Salih Topcu on 29.02.2020.
+  Copyright © 2020 salihtopcu. All rights reserved.
+*/
+
+"OK" = "Tamam";
+"BaseURL" = "https://api.myjson.com";
+"Warning" = "Uyarı";
+"UserEmptyControll" = "Lütfen Kullanıcı adını boş bırakmayınız";
+"UserValidControll" = "Lütfen Geçerli Kullanıcı Adı Giriniz";
+

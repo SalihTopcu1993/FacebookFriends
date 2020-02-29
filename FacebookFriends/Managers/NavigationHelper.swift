@@ -21,7 +21,7 @@ class NavigationHelper: NSObject {
     }
     
     func DetailVC(view: UIViewController, result : ResponseItem ) {
-        if let vc = NavigationHelper.shared.createVCFromStoryboard(boardName: "Main", identifier: "DetailViewContoller") as? DetailViewController {
+        if let vc = NavigationHelper.shared.createVCFromStoryboard(boardName: "Main", identifier: "DetailViewController") as? DetailViewController {
             vc.result = result
             view.navigationController?.pushViewController(vc, animated: true)
         }

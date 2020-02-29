@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
         
     @IBAction func loginButton(_ sender: Any) {
         if userNameTextField.text?.isEmpty ?? false {
-            ErrorReporting.shared.showMessage(title: "Uyarı", msg: "Kullanıcı adını boş bırakmayınız", on: self)
+            ErrorReporting.shared.showMessage(title: LocalizedString("Warning"), msg: LocalizedString("UserEmptyControll"), on: self)
         }else{
             viewModel.checkLogin(userName: userNameTextField.text ?? "")
         }
@@ -37,7 +37,7 @@ extension LoginViewController: LoginDelegate {
         if success {
             NavigationHelper.shared.FriendListVC(view: self, userName: userNameTextField.text)
         }else {
-            ErrorReporting.shared.showMessage(title: "Uyarı", msg: "Lütfen Geçerli Kullanıcı Adı Giriniz", on: self)
+            ErrorReporting.shared.showMessage(title: LocalizedString("Warning"), msg: LocalizedString("UserValidControll"), on: self)
         }
     }
 }

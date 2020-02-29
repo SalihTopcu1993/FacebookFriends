@@ -8,10 +8,16 @@
 
 import UIKit
 import MapKit
+import Kingfisher
 
-class DetailViewController: UIViewController, MKMapViewDelegate {
+class DetailViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var registeredLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     var result : ResponseItem?
     
@@ -20,9 +26,22 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
 
         mapView.delegate = self
         setMap()
+        setUI()
     }
     
+    func setUI(){
+        self.title = "Detail"
+        guard let value = result else { return }
+        profileImageView.kf.setImage(with: URL(string: value.picture!))
+        nameLabel.text = value.name
+        addressLabel.text = value.address
+        registeredLabel.text = value.registeredDate
+    }
+    
+}
 
+extension DetailViewController: MKMapViewDelegate {
+    
     func setMap() {
         let initialLocation = CLLocation(latitude: result?.home?.latitude ?? 0.0, longitude: result?.home?.longitude ?? 0.0)
         let regionRadius: CLLocationDistance = 1000
@@ -40,6 +59,22 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
           coordinate: CLLocationCoordinate2D(latitude: result?.home?.latitude ?? 0.0, longitude: result?.home?.longitude ?? 0.0))
         mapView.addAnnotation(artwork)
     }
+}
 
+extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
+        
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        result?.favoriteFriends?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = result?.favoriteFriends?[indexPath.row].name
+        return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 30
+    }
+    
 }
 

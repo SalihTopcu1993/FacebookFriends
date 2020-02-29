@@ -18,6 +18,7 @@ class FriendListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "FriendList"
         initVM()
     }
     
@@ -48,16 +49,12 @@ extension FriendListViewController: UICollectionViewDelegate, UICollectionViewDa
         guard let result = viewModel.result?[indexPath.row] else { return }
         NavigationHelper.shared.DetailVC(view: self, result: result)
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width:( self.view.frame.width-40)/2, height: 100)
+        return CGSize(width:( self.view.frame.width-40)/2, height: 200)
+        }
     }
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        insetForSectionAt section: Int) -> UIEdgeInsets {
 
-        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-    }
-}
 
 extension FriendListViewController: ListDelegate {
     func updatedList() {

@@ -19,7 +19,7 @@ let provider = MoyaProvider<FacebookFriendsService>(plugins: pluginsArray)
 extension FacebookFriendsService: TargetType {
 
     var baseURL: URL {
-        return URL(string: "https://api.myjson.com")!
+        return URL(string: LocalizedString("BaseURL"))!
     }
 
     var path: String {

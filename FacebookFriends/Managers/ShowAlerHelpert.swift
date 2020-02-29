@@ -1,5 +1,5 @@
 //
-//  ShowAlert.swift
+//  ShowAlerHelpert.swift
 //  FacebookFriends
 //
 //  Created by Salih Topcu on 26.02.2020.
@@ -15,7 +15,7 @@ class ErrorReporting {
     
     func showMessage(title: String, msg: String, `on` controller: UIViewController) {
         let alert = UIAlertController(title: title, message: msg, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: nil))
+        alert.addAction(UIAlertAction(title: LocalizedString("OK"), style: UIAlertAction.Style.default, handler: nil))
         controller.present(alert, animated: true, completion: nil)
     }
 }

@@ -12,7 +12,7 @@
 		A26C9731C410F3D77D145DDE /* Pods_FacebookFriends_FacebookFriendsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80DAAE461CE9DEF1DDD7C19A /* Pods_FacebookFriends_FacebookFriendsUITests.framework */; };
 		DF2806C82406D41700E3E08D /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2806C72406D41700E3E08D /* FriendListViewController.swift */; };
 		DF2806CA2406D42500E3E08D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2806C92406D42500E3E08D /* DetailViewController.swift */; };
-		DF2806CE2406DA4800E3E08D /* ShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2806CD2406DA4800E3E08D /* ShowAlert.swift */; };
+		DF2806CE2406DA4800E3E08D /* ShowAlerHelpert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2806CD2406DA4800E3E08D /* ShowAlerHelpert.swift */; };
 		DF2806D12406E0DF00E3E08D /* FriendListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2806D02406E0DF00E3E08D /* FriendListCell.swift */; };
 		DF7FFC8E2407DC3700865591 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7FFC8D2407DC3700865591 /* RealmManager.swift */; };
 		DF7FFC922407DE3900865591 /* RealmList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7FFC912407DE3900865591 /* RealmList.swift */; };
@@ -36,6 +36,8 @@
 		DFCDC761240665FE00C07689 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDC760240665FE00C07689 /* Home.swift */; };
 		DFCDC7632406664D00C07689 /* FavoriteFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDC7622406664D00C07689 /* FavoriteFriends.swift */; };
 		DFE3FA5B240AA9C2009F0A82 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE3FA5A240AA9C2009F0A82 /* LoginViewModel.swift */; };
+		DFE3FA5D240ABC92009F0A82 /* LocalizedStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = DFE3FA5C240ABC92009F0A82 /* LocalizedStrings.strings */; };
+		DFE3FA60240ABD61009F0A82 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE3FA5F240ABD61009F0A82 /* Localization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +68,7 @@
 		C0B9D40D881FDAD35E348583 /* Pods_FacebookFriendsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FacebookFriendsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF2806C72406D41700E3E08D /* FriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
 		DF2806C92406D42500E3E08D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		DF2806CD2406DA4800E3E08D /* ShowAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlert.swift; sourceTree = "<group>"; };
+		DF2806CD2406DA4800E3E08D /* ShowAlerHelpert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlerHelpert.swift; sourceTree = "<group>"; };
 		DF2806D02406E0DF00E3E08D /* FriendListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListCell.swift; sourceTree = "<group>"; };
 		DF7FFC8D2407DC3700865591 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		DF7FFC912407DE3900865591 /* RealmList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmList.swift; sourceTree = "<group>"; };
@@ -96,6 +98,8 @@
 		DFCDC760240665FE00C07689 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		DFCDC7622406664D00C07689 /* FavoriteFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFriends.swift; sourceTree = "<group>"; };
 		DFE3FA5A240AA9C2009F0A82 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		DFE3FA5C240ABC92009F0A82 /* LocalizedStrings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = LocalizedStrings.strings; sourceTree = "<group>"; };
+		DFE3FA5F240ABD61009F0A82 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		E1CDBD2E0AFBC57ABBE525BB /* Pods-FacebookFriends-FacebookFriendsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacebookFriends-FacebookFriendsUITests.release.xcconfig"; path = "Target Support Files/Pods-FacebookFriends-FacebookFriendsUITests/Pods-FacebookFriends-FacebookFriendsUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -191,7 +195,7 @@
 		DFB0364C2406B1AF0051E3A8 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				DF2806CD2406DA4800E3E08D /* ShowAlert.swift */,
+				DF2806CD2406DA4800E3E08D /* ShowAlerHelpert.swift */,
 				DFB0364D2406B1CE0051E3A8 /* NavigationHelper.swift */,
 				DF7FFC8D2407DC3700865591 /* RealmManager.swift */,
 			);
@@ -223,6 +227,7 @@
 		DFB9AF9F24057C430022B967 /* FacebookFriends */ = {
 			isa = PBXGroup;
 			children = (
+				DFE3FA5E240ABD3E009F0A82 /* Utilities */,
 				DF2806CF2406E0B600E3E08D /* Cell */,
 				DFB0364C2406B1AF0051E3A8 /* Managers */,
 				DFB03645240681060051E3A8 /* Network */,
@@ -306,8 +311,17 @@
 			children = (
 				DFB9AFAE24057C440022B967 /* Info.plist */,
 				DFB9AFA924057C440022B967 /* Assets.xcassets */,
+				DFE3FA5C240ABC92009F0A82 /* LocalizedStrings.strings */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		DFE3FA5E240ABD3E009F0A82 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DFE3FA5F240ABD61009F0A82 /* Localization.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -420,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFB9AFAD24057C440022B967 /* LaunchScreen.storyboard in Resources */,
+				DFE3FA5D240ABC92009F0A82 /* LocalizedStrings.strings in Resources */,
 				DFB9AFAA24057C440022B967 /* Assets.xcassets in Resources */,
 				DFB9AFA824057C430022B967 /* Main.storyboard in Resources */,
 			);
@@ -561,9 +576,10 @@
 				DFB036472406815B0051E3A8 /* FacebookFriendsServices.swift in Sources */,
 				DF8E636524083F3C00CF8832 /* Artwork.swift in Sources */,
 				DF7FFC962407DE6300865591 /* RealmFavoriteFriends.swift in Sources */,
+				DFE3FA60240ABD61009F0A82 /* Localization.swift in Sources */,
 				DF7FFC982407DEB600865591 /* RealmItem.swift in Sources */,
 				DF7FFC922407DE3900865591 /* RealmList.swift in Sources */,
-				DF2806CE2406DA4800E3E08D /* ShowAlert.swift in Sources */,
+				DF2806CE2406DA4800E3E08D /* ShowAlerHelpert.swift in Sources */,
 				DF2806D12406E0DF00E3E08D /* FriendListCell.swift in Sources */,
 				DFCDC75B240653BD00C07689 /* SceneDelegate.swift in Sources */,
 				DFB0364B24068BA60051E3A8 /* FriendListViewModel.swift in Sources */,
