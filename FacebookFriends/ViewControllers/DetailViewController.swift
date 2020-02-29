@@ -28,7 +28,7 @@ class DetailViewController: UIViewController {
         setMap()
         setUI()
     }
-    
+//MARK: - FUNCTIONS
     func setUI(){
         self.title = "Detail"
         guard let value = result else { return }
@@ -39,7 +39,7 @@ class DetailViewController: UIViewController {
     }
     
 }
-
+//MARK: - MAPKIT
 extension DetailViewController: MKMapViewDelegate {
     
     func setMap() {
@@ -60,7 +60,7 @@ extension DetailViewController: MKMapViewDelegate {
         mapView.addAnnotation(artwork)
     }
 }
-
+//MARK: - TABLEVIEW
 extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
         
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

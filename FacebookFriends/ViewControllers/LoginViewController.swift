@@ -17,12 +17,15 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initVM()
-    
+        
     }
+    
+//MARK: - FUNCTIONS
     func initVM(){
         viewModel.delegate = self
     }
-        
+    
+//MARK: - ACTİONS
     @IBAction func loginButton(_ sender: Any) {
         if userNameTextField.text?.isEmpty ?? false {
             ErrorReporting.shared.showMessage(title: LocalizedString("Warning"), msg: LocalizedString("UserEmptyControll"), on: self)
@@ -31,7 +34,7 @@ class LoginViewController: UIViewController {
         }
     }
 }
-
+//MARK: - LOGİNVC DELEGATE
 extension LoginViewController: LoginDelegate {
     func navigate(success: Bool) {
         if success {

@@ -22,6 +22,7 @@ class FriendListViewController: UIViewController {
         initVM()
     }
     
+//MARK: - FUNCTIONS
     func initVM(){
         viewModel.userName = userName
         viewModel.delegate = self
@@ -30,7 +31,7 @@ class FriendListViewController: UIViewController {
     }
 
 }
-
+//MARK: - COLLECTIONVIEW
 extension FriendListViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.result?.count ?? 0
@@ -55,7 +56,7 @@ extension FriendListViewController: UICollectionViewDelegate, UICollectionViewDa
         }
     }
 
-
+//MARK: - FRIENDLISTVC DELEGATE
 extension FriendListViewController: ListDelegate {
     func updatedList() {
         collectionView.reloadData()
