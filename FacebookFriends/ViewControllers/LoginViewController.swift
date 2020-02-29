@@ -12,25 +12,33 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var userNameTextField: UITextField!
     
-    let loginList = ["", "9nd54", "v542w", "17pcy0", "gbf48", "zdah4"]
+    let viewModel = LoginViewModel()
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        initVM()
     
     }
-    
-    func checkLogin(){
-        if loginList.contains(userNameTextField.text ?? "") {
-            NavigationHelper.shared.FriendListVC(view: self, userName: "9nd54")
+    func initVM(){
+        viewModel.delegate = self
+    }
+        
+    @IBAction func loginButton(_ sender: Any) {
+        if userNameTextField.text?.isEmpty ?? false {
+            ErrorReporting.shared.showMessage(title: "Uyarı", msg: "Kullanıcı adını boş bırakmayınız", on: self)
         }else{
-            ErrorReporting.shared.showMessage(title: "Uyarı", msg: "Lütfen Geçerli Kullanıcı Adı Giriniz", on: self)
-            
+            viewModel.checkLogin(userName: userNameTextField.text ?? "")
         }
     }
-    
-    @IBAction func loginButton(_ sender: Any) {
-        checkLogin()
+}
+
+extension LoginViewController: LoginDelegate {
+    func navigate(success: Bool) {
+        if success {
+            NavigationHelper.shared.FriendListVC(view: self, userName: userNameTextField.text)
+        }else {
+            ErrorReporting.shared.showMessage(title: "Uyarı", msg: "Lütfen Geçerli Kullanıcı Adı Giriniz", on: self)
+        }
     }
 }
 

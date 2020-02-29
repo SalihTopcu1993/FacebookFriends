@@ -1,5 +1,5 @@
 //
-//  ViewModel.swift
+//  FriendListViewModel.swift
 //  FacebookFriends
 //
 //  Created by Salih Topcu on 26.02.2020.
@@ -13,7 +13,7 @@ protocol ListDelegate: class {
     func updatedList()
 }
 
-class ViewModel {
+class FriendListViewModel {
     var result : [ResponseItem]?
     var userName: String?
     weak var delegate: ListDelegate?
@@ -38,5 +38,4 @@ class ViewModel {
             }
         }
     }
-
 }

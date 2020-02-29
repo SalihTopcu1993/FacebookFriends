@@ -12,7 +12,7 @@ class FriendListViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var viewModel = ViewModel()
+    var viewModel = FriendListViewModel()
     var userName: String?
     var result: ResponseList?
     
@@ -22,7 +22,7 @@ class FriendListViewController: UIViewController {
     }
     
     func initVM(){
-        viewModel.userName = "9nd54"
+        viewModel.userName = userName
         viewModel.delegate = self
         viewModel.getList()
 
