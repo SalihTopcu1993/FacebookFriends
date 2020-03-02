@@ -31,7 +31,6 @@
 		DFB9AFAD24057C440022B967 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFB9AFAB24057C440022B967 /* LaunchScreen.storyboard */; };
 		DFB9AFB824057C440022B967 /* FacebookFriendsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB9AFB724057C440022B967 /* FacebookFriendsTests.swift */; };
 		DFB9AFC324057C440022B967 /* FacebookFriendsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB9AFC224057C440022B967 /* FacebookFriendsUITests.swift */; };
-		DFCDC75B240653BD00C07689 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDC75A240653BC00C07689 /* SceneDelegate.swift */; };
 		DFCDC75F24065DAE00C07689 /* ResponseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDC75E24065DAE00C07689 /* ResponseList.swift */; };
 		DFCDC761240665FE00C07689 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDC760240665FE00C07689 /* Home.swift */; };
 		DFCDC7632406664D00C07689 /* FavoriteFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDC7622406664D00C07689 /* FavoriteFriends.swift */; };
@@ -39,6 +38,7 @@
 		DFE3FA5D240ABC92009F0A82 /* LocalizedStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = DFE3FA5C240ABC92009F0A82 /* LocalizedStrings.strings */; };
 		DFE3FA60240ABD61009F0A82 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE3FA5F240ABD61009F0A82 /* Localization.swift */; };
 		DFE3FA62240AC396009F0A82 /* CheckInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE3FA61240AC396009F0A82 /* CheckInternet.swift */; };
+		DFFB1F1E240D2BCB005CA67D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFB1F1D240D2BCB005CA67D /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,7 +94,6 @@
 		DFB9AFBE24057C440022B967 /* FacebookFriendsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacebookFriendsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB9AFC224057C440022B967 /* FacebookFriendsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookFriendsUITests.swift; sourceTree = "<group>"; };
 		DFB9AFC424057C440022B967 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DFCDC75A240653BC00C07689 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../../../sssssss/sssssss/SceneDelegate.swift; sourceTree = "<group>"; };
 		DFCDC75E24065DAE00C07689 /* ResponseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseList.swift; sourceTree = "<group>"; };
 		DFCDC760240665FE00C07689 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		DFCDC7622406664D00C07689 /* FavoriteFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFriends.swift; sourceTree = "<group>"; };
@@ -102,6 +101,7 @@
 		DFE3FA5C240ABC92009F0A82 /* LocalizedStrings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = LocalizedStrings.strings; sourceTree = "<group>"; };
 		DFE3FA5F240ABD61009F0A82 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		DFE3FA61240AC396009F0A82 /* CheckInternet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInternet.swift; sourceTree = "<group>"; };
+		DFFB1F1D240D2BCB005CA67D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E1CDBD2E0AFBC57ABBE525BB /* Pods-FacebookFriends-FacebookFriendsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacebookFriends-FacebookFriendsUITests.release.xcconfig"; path = "Target Support Files/Pods-FacebookFriends-FacebookFriendsUITests/Pods-FacebookFriends-FacebookFriendsUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -303,8 +303,8 @@
 		DFB9AFD5240580350022B967 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				DFFB1F1D240D2BCB005CA67D /* SceneDelegate.swift */,
 				DFB9AFA024057C430022B967 /* AppDelegate.swift */,
-				DFCDC75A240653BC00C07689 /* SceneDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -573,6 +573,7 @@
 				DFCDC75F24065DAE00C07689 /* ResponseList.swift in Sources */,
 				DFB9AFA524057C430022B967 /* LoginViewController.swift in Sources */,
 				DF7FFC942407DE4B00865591 /* RealmHome.swift in Sources */,
+				DFFB1F1E240D2BCB005CA67D /* SceneDelegate.swift in Sources */,
 				DFCDC761240665FE00C07689 /* Home.swift in Sources */,
 				DF7FFC8E2407DC3700865591 /* RealmManager.swift in Sources */,
 				DFB9AFA124057C430022B967 /* AppDelegate.swift in Sources */,
@@ -584,7 +585,6 @@
 				DF7FFC922407DE3900865591 /* RealmList.swift in Sources */,
 				DF2806CE2406DA4800E3E08D /* ShowAlerHelpert.swift in Sources */,
 				DF2806D12406E0DF00E3E08D /* FriendListCell.swift in Sources */,
-				DFCDC75B240653BD00C07689 /* SceneDelegate.swift in Sources */,
 				DFB0364B24068BA60051E3A8 /* FriendListViewModel.swift in Sources */,
 				DFB0364E2406B1CE0051E3A8 /* NavigationHelper.swift in Sources */,
 				DFCDC7632406664D00C07689 /* FavoriteFriends.swift in Sources */,
