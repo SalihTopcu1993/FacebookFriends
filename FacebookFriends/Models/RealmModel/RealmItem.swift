@@ -23,6 +23,7 @@ class RealmItem: Object {
     @objc dynamic var address: String = ""
     @objc dynamic var about: String = ""
     @objc dynamic var registered: String = ""
+    @objc dynamic var userName: String = ""
     var home: RealmHome?
     var favoriteFriends:[RealmFavoriteFriends]? = []
     

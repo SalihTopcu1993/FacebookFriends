@@ -16,7 +16,7 @@ class LoginViewModel {
     
     weak var delegate: LoginDelegate? 
     
-    let loginList = ["9nd54", "v542w", "17pcy0", "gbf48", "zdah4"]
+    let loginList = ["z","9nd54", "v542w", "17pcy0", "gbf48", "zdah4"]
     
     func checkLogin(userName: String){
         if loginList.contains(userName) {

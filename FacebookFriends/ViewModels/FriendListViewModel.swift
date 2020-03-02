@@ -19,23 +19,26 @@ class FriendListViewModel {
     weak var delegate: ListDelegate?
 
     func getList() {
-
-        provider.request(.list(username:(self.userName!))) { (response) in
-            switch response {
-            case .failure(let err):
-                print(err)
-                 RealmHelper.shared.readResultElement()
-            case .success(let value):
-                let data = value.data
-                do{
-                    self.result = try JSONDecoder().decode([ResponseItem].self, from: data)
-                    RealmHelper.shared.addResultElement(self.result ?? [])
-                    self.delegate?.updatedList()
-                } catch let error {
-                    print(error)
+        if CheckInternet.Connection() {
+            provider.request(.list(username:(self.userName!))) { (response) in
+                switch response {
+                case .failure(let err):
+                    print(err)
+                        self.delegate?.updatedList()
+                case .success(let value):
+                    let data = value.data
+                    do{
+                        self.result = try JSONDecoder().decode([ResponseItem].self, from: data)
+                        RealmHelper.shared.addResultElement(self.result!)
+                        self.delegate?.updatedList()
+                    } catch let error {
+                        print(error)
+                    }
                 }
-                
             }
+        }else{
+            self.result = RealmHelper.shared.readResultElement()
+            self.delegate?.updatedList()
         }
     }
 }

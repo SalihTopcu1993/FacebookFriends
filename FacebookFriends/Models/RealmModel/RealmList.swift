@@ -11,6 +11,6 @@ import RealmSwift
 
 class RealmList: Object {
     
-    var value:RealmItem! // = RealmItem()
+    var value:RealmItem!
     
 }
