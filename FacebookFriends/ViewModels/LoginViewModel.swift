@@ -16,14 +16,12 @@ class LoginViewModel {
     
     weak var delegate: LoginDelegate? 
     
-    let loginList = ["z","9nd54", "v542w", "17pcy0", "gbf48", "zdah4"]
+    let loginList = ["9nd54", "v542w", "17pcy0", "gbf48", "zdah4"]
     
     func checkLogin(userName: String){
         if loginList.contains(userName) {
-//            NavigationHelper.shared.FriendListVC(view: self, userName: "9nd54")
             self.delegate?.navigate(success: true)
         }else{
-//            ErrorReporting.shared.showMessage(title: "Uyarı", msg: "Lütfen Geçerli Kullanıcı Adı Giriniz", on: self)
             self.delegate?.navigate(success: false)
             
         }

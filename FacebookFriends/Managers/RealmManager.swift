@@ -15,12 +15,13 @@ class RealmHelper: NSObject{
     static let shared = RealmHelper()
 
     
-    func addResultElement(_ list:[ResponseItem]) {
+    func addResultElement(_ list:[ResponseItem], userName:String) {
         let realm = try! Realm()
 
         try! realm.write {
             for m in list {
                 let newResult = RealmItem()
+                newResult.userName = userName
                 newResult.name = m.name!
                 newResult.about = m.about!
                 newResult.address = m.address!
@@ -37,8 +38,12 @@ class RealmHelper: NSObject{
                     }
                 }
                 newResult.gender = m.gender!
-                newResult.home?.longitude = m.home?.longitude ?? 0.0
-                newResult.home?.latitude = m.home?.latitude ?? 0.0
+                let home = RealmHome()
+                home.latitude = m.home?.latitude ?? 0.0
+                home.longitude = m.home?.longitude ?? 0.0
+                home.id = m.id!
+                newResult.home = home
+                realm.add(home)
                 newResult.id = m.id!
                 newResult.isActive = m.isActive!
                 newResult.phone = m.phone!
@@ -49,12 +54,11 @@ class RealmHelper: NSObject{
         }
     }
     
-    func readResultElement() -> [ResponseItem] {
+    func readResultElement(userName:String) -> [ResponseItem] {
         
         let realm = try! Realm()
         var list:[ResponseItem] = []
-        
-        let listRealm = realm.objects(RealmItem.self).filter("age > 0")
+        let listRealm = realm.objects(RealmItem.self).filter("userName == '\(userName)'")
         for realmItem in listRealm {
             var friendList:[FavoriteFriends] = []
             for friend in realmItem.favoriteFriends ?? [] {

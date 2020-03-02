@@ -24,12 +24,11 @@ class FriendListViewModel {
                 switch response {
                 case .failure(let err):
                     print(err)
-                        self.delegate?.updatedList()
                 case .success(let value):
                     let data = value.data
                     do{
                         self.result = try JSONDecoder().decode([ResponseItem].self, from: data)
-                        RealmHelper.shared.addResultElement(self.result!)
+                        RealmHelper.shared.addResultElement(self.result!, userName: self.userName!)
                         self.delegate?.updatedList()
                     } catch let error {
                         print(error)
@@ -37,7 +36,7 @@ class FriendListViewModel {
                 }
             }
         }else{
-            self.result = RealmHelper.shared.readResultElement()
+            self.result = RealmHelper.shared.readResultElement(userName: userName!)
             self.delegate?.updatedList()
         }
     }
